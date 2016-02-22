@@ -51,7 +51,7 @@ var content = fs.readFileSync(filePath).toString();
 var blocks = getBlocks(argv._[0], content, argv.removeLivereload);
 var config = getConfig(argv.c);
 var process = (argv.noprocess === true) ? true : processBlocks(blocks, argv.dest, config);
-var output = getHTML(content, blocks, argv.htmlmin, config);
+var output = getHTML(content, blocks, argv.htmlmin, argv.bust, config);
 
 if (process) {
 	if (argv.o) {
