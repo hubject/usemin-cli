@@ -63,7 +63,7 @@ var blocks = getBlocks(argv._[0], content, argv.removeLivereload);
 var config = getConfig(argv.c);
 var process = (argv.noprocess === true) ? true : processBlocks(blocks, argv.dest, config);
 
-processCacheBusting(blocks, argv.dest, argv.bustMaps);
+if(argv.bust) processCacheBusting(blocks, argv.dest, argv.bustMaps);
 
 var output = getHTML(content, blocks, argv.htmlmin, config);
 
