@@ -1,5 +1,5 @@
 {
-  "name": "usemin-cli",
+  "name": "@hubject/usemin-cli",
   "version": "0.0.7",
   "description": "Replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views).",
   "main": "index.js",
